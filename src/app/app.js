@@ -242,7 +242,7 @@ class App extends React.Component {
 
 
     render() {
-        const { data, processedDetailData, constants } = this.state;
+        const { data, processedDetailData } = this.state;
 
         return (
             <div>
@@ -280,7 +280,6 @@ class App extends React.Component {
 
                     <LayoutPanel region="east" split style = {{ minWidth: 200, maxWidth: 400 }}>
                         <PropertyGrid
-                            { ...constants }
                             data = { processedDetailData }
                         />
                     </LayoutPanel>
