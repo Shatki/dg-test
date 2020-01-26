@@ -15,7 +15,7 @@ class App extends React.Component {
             itemDetailData: null,
             processedDetailData: null,
             itemMatrix: [
-                //{"nameField": "uuid", "valueField": null, "titleField": "UUID", "groupField": "Основные", "editorField": "text"},
+                {"nameField": "uuid", "valueField": null, "titleField": "UUID", "groupField": "Main", "editorField": "text"},
                 {"nameField": "name", "valueField": null, "titleField": "Name", "groupField": "Main",
                     "editorField": "text", "rules": ["required",]},
                 {"nameField": "code", "valueField": null, "titleField": "Code", "groupField": "Main",
@@ -34,21 +34,21 @@ class App extends React.Component {
                     "editorField": "text", "rules": ["required", "precision3"] },
 
                 {"nameField": "measureName", "valueField": null, "titleField": "Measures", "groupField": "Prices",
-                    "editorField": "combo", "dataField": "measureTypes", "rules": ["required",]},
+                    "editorField": "text", "dataField": "measureTypes", "rules": ["required",]},
                 {"nameField": "tax", "valueField": null, "titleField": "tax", "groupField": "Prices",
-                    "editorField": "combo", "dataField": "taxTypes", "rules": ["required",] },
+                    "editorField": "text", "dataField": "taxTypes", "rules": ["required",] },
                 {"nameField": "allowToSell", "valueField": null, "titleField": "Sale ban", "groupField": "Stock",
                     "editorField": "switch", "rules": ["required",] },
                 {"nameField": "description", "valueField": null, "titleField": "Description", "groupField": "Main",
                     "editorField": "text", "rules": ["nullable",] },
 
                 {"nameField": "type", "valueField": null, "titleField": "Type of the goods", "groupField": "Main",
-                    "editorField": "combo", "dataField": "productTypes", "rules": ["required",] },
+                    "editorField": "text", "dataField": "productTypes", "rules": ["required",] },
 
                 {"nameField": "group", "valueField": null, "titleField": "is Group", "groupField": "Main",
                     "editorField": "switch", "rules": ["required",] },
                 {"nameField": "parentUuid", "valueField": null, "titleField": "Parent group", "groupField": "Main",
-                    "editorField": "tree", "dataField": null, "rules": ["nullable",] },
+                    "editorField": "text", "dataField": null, "rules": ["nullable",] },
             ],
         }
     }

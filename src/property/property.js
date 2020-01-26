@@ -78,8 +78,8 @@ export default class PropertyGrid extends React.Component {
                     renderGroup={ this.renderGroup }
                 >
                     <GridColumn width={ 25 } />
-                    <GridColumn field="titleField" title="Имя поля" width="40%" />
-                    <GridColumn field="valueField" title="Параметр" width="60%"
+                    <GridColumn field="titleField" title="Field name" width="40%" />
+                    <GridColumn field="valueField" title="Value" width="60%"
                                 editable
                                 editRules={ rules }
                                 editor={ this.renderEditor }
