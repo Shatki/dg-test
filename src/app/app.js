@@ -1,11 +1,7 @@
 import React from 'react';
 import { Layout, LayoutPanel, DataGrid, GridColumn } from 'rc-easyui';
 import PropertyGrid from "../property/property";
-import '../theme/style.css'
-import '../theme/react.css'
-import '../theme/icon.css'
-import './style.css';
-
+import "./style.css"
 
 class App extends React.Component {
     constructor(props) {

@@ -15,7 +15,9 @@ export default class PropertyGrid extends React.Component {
         return data
     };
 
-
+    clearData = () => {
+        this.setState({ data: [] })
+    };
     changeData = () => {
         const { data } = this.props;
         this.setState({ data })
@@ -77,7 +79,7 @@ export default class PropertyGrid extends React.Component {
                 <DataGrid
                     ref={detail => this.detail = detail}
                     data={data}
-                    //idField = "nameField"
+                    idField = "valueField"
                     columnResizing
                     expanderWidth={ 20 }
                     selectionMode="row"
