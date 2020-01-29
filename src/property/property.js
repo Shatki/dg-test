@@ -20,8 +20,14 @@ export default class PropertyGrid extends React.Component {
         const { data } = this.props;
         this.setState({ data })
     };
-    clearData = () =>{
-        this.setState({ data: [] })
+
+    addData = () =>{
+        const { data } = this.state;
+        const newData = [].concat(data,
+            {"nameField": "length", "valueField": data.length, "titleField": "length", "groupField": "length",
+                    "editorField": "text"});
+        this.setState({ data: newData });
+        //console.log("addData=>", );
     };
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -88,8 +94,9 @@ export default class PropertyGrid extends React.Component {
                                 render={ this.renderView }
                     />
                 </DataGrid>
-                    <button onClick={this.changeData.bind(this)}>Change Data</button>
-                    <button onClick={this.clearData.bind(this)}>Clear Data</button>
+                <button onClick={this.changeData.bind(this)}>Change Data</button>
+                <button onClick={() =>this.addData() }>Add Data</button>
+                <button onClick={() =>this.clearData()}>Clear Data</button>
             </div>
         );
     }
